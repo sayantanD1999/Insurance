@@ -1,8 +1,28 @@
 import React from "react";
 import styles from "../styles/contact.module.css";
 import Image from "next/image";
+import { useForm } from "react-hook-form";
+import axios from "axios";
 
 function Contact() {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => {
+    console.log(data, process.env.NEXT_PUBLIC_EMAIL_ID);
+    axios
+      .post("/api/sendMail", data)
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
+
   return (
     <>
       <div className={styles.container}>
@@ -17,7 +37,7 @@ function Contact() {
             dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
             non proident, sunt in culpa qui officia deserunt
           </p>
-          <form>
+          <form onSubmit={handleSubmit(onSubmit)}>
             <div className="mb-3">
               <label htmlFor="name" className="form-label">
                 First Name
@@ -25,8 +45,9 @@ function Contact() {
               <input
                 type="text"
                 className="form-control"
+                {...register("first_name")}
                 id="name"
-                name="name"
+                name="first_name"
               />
             </div>
             <div className="mb-3">
@@ -35,9 +56,10 @@ function Contact() {
               </label>
               <input
                 type="text"
+                {...register("last_name")}
                 className="form-control"
                 id="name"
-                name="name"
+                name="last_name"
               />
             </div>
             <div className="mb-3">
@@ -48,6 +70,7 @@ function Contact() {
                 type="email"
                 className="form-control"
                 id="email"
+                {...register("email")}
                 name="email"
               />
             </div>
@@ -59,7 +82,8 @@ function Contact() {
                 type="number"
                 className="form-control"
                 id="email"
-                name="email"
+                {...register("phone")}
+                name="phone"
               />
             </div>
             <div className="mb-3">
@@ -70,6 +94,7 @@ function Contact() {
                 className="form-control"
                 id="message"
                 name="message"
+                {...register("message")}
                 rows="3"
               ></textarea>
             </div>
