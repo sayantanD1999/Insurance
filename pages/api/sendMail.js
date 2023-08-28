@@ -5,21 +5,22 @@ import { mailOptions, transporter } from "@/config/nodemailer";
 export default async function handler(req, res) {
   if (req.method == "POST") {
     const data = req.body;
-    res.status(200).json(data);
-
+    console.log(req.body);
     try {
       await transporter.sendMail({
         ...mailOptions,
         subject: "Lead Contact",
         text: "Conatct form",
-        html: `<h1> ${data.first_name} ${data.last_name} ${data.phone} ${data.email} ${data.message}</h1>`,
+        html: `<h1> ${data.data.name} ${data.data.phone} ${data.data.email} ${data.data.message}</h1>`,
       });
-
+      console.log(22);
+      res.status(200).json(data);
       return res
         .status(200)
         .json({ message: "Contact form submitted successfully" });
     } catch (error) {
-      return res.status(400).json(error.message);
+      console.log(error);
+      return res.status(400).json(error);
     }
   }
 }

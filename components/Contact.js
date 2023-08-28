@@ -3,23 +3,43 @@ import styles from "../styles/contact.module.css";
 import Image from "next/image";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+// Hidden for simplicity
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
 
 function Contact() {
+  const phoneRegEx =
+    /((\+*)((0[ -]*)*|((91 )*))((\d{12})+|(\d{10})+))|\d{5}([- ]*)\d{6}/;
+  const emailRegEx =
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  const schema = yup.object().shape({
+    email: yup.string().matches(emailRegEx, "Please provide a valid Email Id"),
+    first_name: yup.string().required("Name is required"),
+    phone: yup
+      .string()
+      .matches(phoneRegEx, "Please provide a valid phone number"),
+  });
+
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
-  } = useForm();
+  } = useForm({ resolver: yupResolver(schema) });
+  console.log(errors);
   const onSubmit = (data) => {
-    console.log(data, process.env.NEXT_PUBLIC_EMAIL_ID);
     axios
-      .post("/api/sendMail", data)
+      .post("/api/sendMail", {
+        data,
+      })
       .then(function (response) {
-        console.log(response);
+        alert(
+          "Form successfully submitted, I will contact you as soon as possible"
+        );
+        reset();
       })
       .catch(function (error) {
-        console.log(error);
+        alert(`${error.message}`);
       });
   };
 
@@ -40,7 +60,7 @@ function Contact() {
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="mb-3">
               <label htmlFor="name" className="form-label">
-                First Name
+                Name
               </label>
               <input
                 type="text"
@@ -49,8 +69,14 @@ function Contact() {
                 id="name"
                 name="first_name"
               />
+              {errors && (
+                <p className="error-msg" role="alert">
+                  {" "}
+                  {errors?.first_name?.message}
+                </p>
+              )}
             </div>
-            <div className="mb-3">
+            {/* <div className="mb-3">
               <label htmlFor="name" className="form-label">
                 Last Name
               </label>
@@ -61,7 +87,7 @@ function Contact() {
                 id="name"
                 name="last_name"
               />
-            </div>
+            </div> */}
             <div className="mb-3">
               <label htmlFor="email" className="form-label">
                 Email address
@@ -73,18 +99,29 @@ function Contact() {
                 {...register("email")}
                 name="email"
               />
+
+              {errors && (
+                <p className="error-msg" role="alert">
+                  {errors?.email?.message}
+                </p>
+              )}
             </div>
             <div className="mb-3">
               <label htmlFor="email" className="form-label">
                 Phone Number
               </label>
               <input
-                type="number"
+                type="text"
                 className="form-control"
                 id="email"
                 {...register("phone")}
                 name="phone"
               />
+              {errors && (
+                <p className="error-msg" role="alert">
+                  {errors?.phone?.message}
+                </p>
+              )}
             </div>
             <div className="mb-3">
               <label htmlFor="message" className="form-label">
@@ -101,34 +138,6 @@ function Contact() {
             <button type="submit" className="btn btn-primary">
               Submit
             </button>
-            <div class="dropdown">
-              <button
-                class="btn btn-secondary dropdown-toggle"
-                type="button"
-                id="dropdownMenuButton1"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Dropdown button
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Action
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Another action
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Something else here
-                  </a>
-                </li>
-              </ul>
-            </div>
           </form>
         </div>
       </div>
