@@ -1,6 +1,6 @@
 // add bootstrap css
 import "bootstrap/dist/css/bootstrap.css";
-import 'bootstrap/dist/js/bootstrap.bundle';
+// import 'bootstrap/dist/js/bootstrap.bundle';
 import Head from "next/head";
 import { useEffect } from "react";
 
