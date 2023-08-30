@@ -11,9 +11,8 @@ export default async function handler(req, res) {
         ...mailOptions,
         subject: "Lead Contact",
         text: "Conatct form",
-        html: `<h1> ${data.data.name} ${data.data.phone} ${data.data.email} ${data.data.message}</h1>`,
+        html: `<h1> Name -  ${data.data.name} <br/> Phone - ${data.data.phone}}</h1>`,
       });
-      console.log(22);
       res.status(200).json(data);
       return res
         .status(200)
