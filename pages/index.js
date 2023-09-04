@@ -3,6 +3,7 @@ import Nav from '@/components/Nav'
 import Hero from '@/components/Hero'
 import Contact from '@/components/Contact'
 import Modal from '@/components/Modal'
+import Calculator from '@/components/Calculator'
 
 
 
@@ -10,10 +11,11 @@ import Modal from '@/components/Modal'
 export default function Home() {
   return (
     <>
-      <Nav/>
+      {/* <Nav/>
       <Hero/>
       <Modal/>
-      <Contact/>
+      <Contact/> */}
+      <Calculator/>
      
 
     </>
