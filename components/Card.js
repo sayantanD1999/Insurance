@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "../styles/card.module.css";
 
 function Card() {
   const [data, setData] = useState([
@@ -18,11 +19,20 @@ function Card() {
       title: "XYZ",
       desc: "sadaduiaduia",
     },
+    {
+      title: "XYZ",
+      desc: "sadaduiaduia",
+    },
+    {
+      title: "XYZ",
+      desc: "sadaduiaduia",
+    }
   ]);
 
   return (
     <>
       <div className="container">
+        <h1 className={styles.cardHeading}>Perfect Insurance Designed with You in Mind</h1>
         <div className="row m-2">
           {data.map((item, index) => {
             return (

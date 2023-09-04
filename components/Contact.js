@@ -5,7 +5,10 @@ import Image from "next/image";
 function Contact() {
     return (
         <>
+        <h1 className={styles.contactHeading}>Contact Us</h1>
+
             <div className={styles.container}>
+
                 <div className={styles.contactImage}>
                     <Image src="/contact.png" width="500" height="500" />
                 </div>
