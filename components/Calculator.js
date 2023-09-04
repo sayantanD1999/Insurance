@@ -42,14 +42,62 @@ function Calculator() {
   };
 
   useEffect(() => {
-    loadData();
+    // loadData();
   }, []);
 
   return (
     <div>
       Calculator
       <select className="form-control" name="amt">
-        {amtArr}
+        <option
+          onChange={() => {
+            setAmt({ key: "lac", val: 20 });
+          }}
+        >
+          20 Lac
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "lac", val: 30 });
+          }}
+        >
+          30 Lac
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "lac", val: 40 });
+          }}
+        >
+          40 Lac
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "lac", val: 50 });
+          }}
+        >
+          50 Lac
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "lac", val: 60 });
+          }}
+        >
+          60 Lac
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "lac", val: 70 });
+          }}
+        >
+          70 Lac
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "lac", val: 80 });
+          }}
+        >
+          80 Lac
+        </option>
       </select>
       <select className="form-control" name="age">
         {(() => {
