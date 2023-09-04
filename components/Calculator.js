@@ -98,6 +98,286 @@ function Calculator() {
         >
           80 Lac
         </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "lac", val: 90 });
+          }}
+        >
+          90 Lac
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 10000000 });
+          }}
+        >
+          1 Cr
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 15000000 });
+          }}
+        >
+          1.5 Cr
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 20000000 });
+          }}
+        >
+          2 Cr
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 25000000 });
+          }}
+        >
+          2.5 Cr
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 30000000 });
+          }}
+        >
+          3 Cr
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 35000000 });
+          }}
+        >
+          3.5 Cr
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 40000000 });
+          }}
+        >
+          4 Cr
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 45000000 });
+          }}
+        >
+          4.5 Cr
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 50000000 });
+          }}
+        >
+          5 Cr
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 55000000 });
+          }}
+        >
+          5.5 Cr
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 60000000 });
+          }}
+        >
+          6 Cr
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 65000000 });
+          }}
+        >
+          6.5 Cr
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 70000000 });
+          }}
+        >
+          7 Cr
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 75000000 });
+          }}
+        >
+          7.5 Cr
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 80000000 });
+          }}
+        >
+          8 Cr
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 85000000 });
+          }}
+        >
+          8.5 Cr
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 90000000 });
+          }}
+        >
+          9 Cr
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 95000000 });
+          }}
+        >
+          9.5 Cr
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 100000000 });
+          }}
+        >
+          10 Cr
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 150000000 });
+          }}
+        >
+          10.5 Cr
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 110000000 });
+          }}
+        >
+          11 Cr
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 115000000 });
+          }}
+        >
+          11.5 Cr
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 120000000 });
+          }}
+        >
+          12 Cr
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 125000000 });
+          }}
+        >
+          12.5 Cr
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 130000000 });
+          }}
+        >
+          13 Cr
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 135000000 });
+          }}
+        >
+          13.5 Cr
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 140000000 });
+          }}
+        >
+          14 Cr
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 145000000 });
+          }}
+        >
+          14.5 Cr
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 150000000 });
+          }}
+        >
+          15 Cr
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 155000000 });
+          }}
+        >
+          15.5 Cr
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 160000000 });
+          }}
+        >
+          16 Cr
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 165000000 });
+          }}
+        >
+          16.5 Cr
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 170000000 });
+          }}
+        >
+          17 Cr
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 175000000 });
+          }}
+        >
+          17.5 Cr
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 180000000 });
+          }}
+        >
+          18 Cr
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 185000000 });
+          }}
+        >
+          18.5 Cr
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 190000000 });
+          }}
+        >
+          19 Cr
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 195000000 });
+          }}
+        >
+          19.5 Cr
+        </option>
+        <option
+          onChange={() => {
+            setAmt({ key: "cr", val: 200000000 });
+          }}
+        >
+          20 Cr
+        </option>
       </select>
       <select className="form-control" name="age">
         {(() => {
