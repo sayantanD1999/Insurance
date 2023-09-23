@@ -1,8 +1,12 @@
 import styles from '@/styles/Home.module.css'
-import Nav from '@/components/Nav'
+import NavBar from '@/components/NavBar'
 import Hero from '@/components/Hero'
 import Contact from '@/components/Contact'
+import GridCard from '@/components/Card'
+import About from '@/components/About'
 import Modal from '@/components/Modal'
+import Features from '@/components/Features'
+import Footer from '@/components/Footer'
 
 
 
@@ -10,11 +14,13 @@ import Modal from '@/components/Modal'
 export default function Home() {
   return (
     <>
-      <Nav/>
+      <NavBar/>
       <Hero/>
-      <Modal/>
+      <GridCard/>
+      <About/>
+      <Features/>
       <Contact/>
-     
+     <Footer/>
 
     </>
   )

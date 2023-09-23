@@ -1,0 +1,47 @@
+.section_head{
+    margin-bottom: 60px;
+}
+.section_head h4{
+    position: relative;
+    padding: 0;
+    line-height: 1.5;
+    letter-spacing: .3px;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: none;
+    margin-bottom: 30px;
+}
+.section_head h4::before{
+    content: '';
+    width: 60px;
+    height: 3px;
+    background-color: blue;
+    position: absolute;
+    bottom: -10px ;
+    left: 0;
+    right: 0;
+    margin: auto;
+    
+}
+.section_head h4 span{
+    font-weight: 400;
+    padding-bottom: 5px;
+    color: rgb(67, 62, 62);
+
+}
+.section_head p{
+    color: #818181;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+
+}
+
+.item{
+    background: white;
+    text-align: center;
+    padding: 30px 25px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.07);
+    border-radius: 20px;
+}
