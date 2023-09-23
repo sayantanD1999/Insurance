@@ -1,5 +1,5 @@
 .contactForm{
-    width: 50%;
+    width: auto;
 }
 .contactImage{
     width: 50%;
@@ -15,6 +15,16 @@
     margin-bottom: 0px;
     font-size: 60px;
     padding: 0 250px 0 250px;
+}
+
+.floatBtn{
+	position:fixed;
+	bottom:40px;
+	right:40px;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
 }
 
 @media (max-width: 768px){

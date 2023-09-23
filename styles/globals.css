@@ -1,11 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Pacifico&family=Poppins:wght@300;400;500;700&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Pacifico&family=Poppins:wght@300;400;500;700&display=swap");
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-body{
-  font-family: 'Poppins', sans-serif;
+body {
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
+}
+
+.error-msg {
+  color: red;
+}
+
+.float-button{
+	position:fixed;
+	bottom:40px;
+	right:40px;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
 }

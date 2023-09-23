@@ -5,8 +5,12 @@ import Contact from '@/components/Contact'
 import GridCard from '@/components/Card'
 import About from '@/components/About'
 import Modal from '@/components/Modal'
+<<<<<<< HEAD
+import Calculator from '@/components/Calculator'
+=======
 import Features from '@/components/Features'
 import Footer from '@/components/Footer'
+>>>>>>> b4c9bba6a980501a996c922cf336b9e04f650fc2
 
 
 
@@ -14,6 +18,14 @@ import Footer from '@/components/Footer'
 export default function Home() {
   return (
     <>
+<<<<<<< HEAD
+      {/* <Nav/>
+      <Hero/>
+      <Modal/>
+      <Contact/> */}
+      <Calculator/>
+     
+=======
       <NavBar/>
       <Hero/>
       <GridCard/>
@@ -21,6 +33,7 @@ export default function Home() {
       <Features/>
       <Contact/>
      <Footer/>
+>>>>>>> b4c9bba6a980501a996c922cf336b9e04f650fc2
 
     </>
   )
