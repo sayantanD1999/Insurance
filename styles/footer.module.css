@@ -1,0 +1,24 @@
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Footer links styles */
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+/* Media query for mobile responsiveness */
+@media screen and (max-width: 600px) {
+    .footer {
+        padding: 10px 0;
+    }
+    .footer a {
+        display: block;
+        margin: 5px 0;
+    }
+}
