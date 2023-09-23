@@ -47,3 +47,22 @@
     font-size: 18px;
     cursor: pointer;
   }
+
+  @media (max-width: 768px){
+    .hero {
+      display: flex;
+      align-items: center;
+      flex-direction: column-reverse;
+      margin: 0px;
+  }
+
+  .heroContent {
+    flex: 2 1;
+    padding: 0px;
+    width: 85%;
+}
+  .heroImage img{
+    height: 100px;
+    width: 100px;
+  }
+  }

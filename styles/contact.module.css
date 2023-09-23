@@ -16,3 +16,26 @@
     font-size: 60px;
     padding: 0 250px 0 250px;
 }
+
+@media (max-width: 768px){
+    .contactHeading{
+        margin-top: 85px;
+        text-align: center;
+        margin-bottom: 0px;
+        font-size: 60px;
+        padding: 0px;
+    }
+    .container{
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+        margin: 0px;
+    }
+    .contactForm{
+        width: 85%;
+    }
+    .contactImage img{
+        height: 100px;
+        width: 100px;
+    }
+}
