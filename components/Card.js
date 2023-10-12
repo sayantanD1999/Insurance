@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import React, { useState } from "react";
 import styles from "../styles/card.module.css";
-
+import { data } from "@/public/data";
 
 function GridCard() {
   const [show, setShow] = useState(false);
@@ -16,37 +16,7 @@ function GridCard() {
   const handleShow = (n, x) => {
     setFileNo(n)
     setModalContent(x)
-    setShow(true);}
-
-
-  const details = [
-    {
-      title: "header 1",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quas",
-      summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quas",
-    },
-    {
-      title: "header 2",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quas",
-      summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quas",
-    },
-    {
-      title: "header 3",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quas",
-      summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quas",
-    },
-    {
-      title: "header 4",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quas",
-      summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quas",
-    },
-    {
-      title: "header 5",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quas",
-      summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quas",
-    }
-
-  ]
+    setShow(true);  }
 
   return (
     <>
@@ -64,7 +34,7 @@ function GridCard() {
         </div>
 
         <Row xs={1} md={3} className="g-4">
-          {details.map((item, idx) => (
+          {data.map((item, idx) => (
             <Col key={idx}>
 
               <Card className={styles.item}>
@@ -88,7 +58,9 @@ function GridCard() {
         <Modal.Header closeButton>
           <Modal.Title>{modalContent.title}</Modal.Title>
         </Modal.Header>
-        <Modal.Body>{modalContent.summary}</Modal.Body>
+        <Modal.Body>{modalContent?.highlights && modalContent?.highlights.map((item,key)=>{
+          return <li key={key}>{item}</li>
+        })}</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
