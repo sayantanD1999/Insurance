@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
-import { mailOptions, transporter } from "@/config/nodemailer";
+import { mailOptions, transporter } from "@/mail-util/nodemailer";
 
 export default async function handler(req, res) {
   if (req.method == "POST") {
@@ -11,7 +11,7 @@ export default async function handler(req, res) {
         ...mailOptions,
         subject: "Lead Contact",
         text: "Conatct form",
-        html: `<h1> Name -  ${data.data.name} <br/> Phone - ${data.data.phone}}</h1>`,
+        html: `<h1> Name -  ${data.data.name} <br/> Phone - ${data.data.phone}</h1>`,
       });
       res.status(200).json(data);
       return res
